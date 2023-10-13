@@ -1,0 +1,175 @@
+/* SCREEN 3 */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color:#EF7F96; */
+  background-color:cadetblue;
+  font-family: 'Raleway', serif;
+}
+
+.content {
+  max-width: 85rem;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score{
+  color:rgb(0, 0, 0);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.movement {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.subtitle {
+  color:rgb(0, 0, 0);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.available {
+  color: rgb(0, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  padding-right: 15px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(10rem, 1fr));
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  background-color: #b6344e;
+  cursor: grab;
+  height: 6.5rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 500ms ease-in-out;
+}
+
+.card--picked {
+  transform: rotateY(180deg);
+}
+
+.card--guessed {
+  background-color: whitesmoke;
+  transform: rotateY(180deg) scale(0.9);
+}
+
+.card__front,
+.card__back {
+  backface-visibility: hidden;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: 1px; 
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: transform 330ms ease-in-out;
+  width: 100%; 
+}
+
+.card__front {
+  transform: rotateY(-180deg);
+}
+
+.front__img {
+  width: 14rem;
+}
+
+.back__img {
+  width: 15rem;
+}
+
+.modal {
+  backdrop-filter: blur(0.2rem);
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: all 270ms ease-in;
+}
+
+.modal--open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 13rem;
+  max-width: 22rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.modal-title {
+  color: black;
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.button {
+  background-color:plum;
+  color: white;
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: all 270ms ease-in;
+}
+
+.button:hover,
+.button:active {
+  background-color: white;
+  color:crimson;
+}
+
+p{
+  font-size: 32px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 1.2rem;
+  color: rgba(0, 0, 0, 0.677);
+}

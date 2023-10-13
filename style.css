@@ -1,0 +1,117 @@
+/* SCREEN 1*/
+
+body {
+    background-image: url("Assets/backgroung-img.webp");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+*{
+   margin: 0;
+   padding: 0;
+}
+
+h1{ 
+    font-family: 'Arial', sans-serif;
+    font-size: 5vw;
+    text-align: center;
+    background-color:#FEC1AF;
+    border: 0.4vw solid black;
+    border-radius: 1vw;
+    width: 48vw;
+    margin-left: 100vh;
+    margin-top: 15vh;
+}
+h2{
+    text-align: center;
+    font-size: 3vw;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#FEC1AF;
+    height: 52vh;
+    width: 28vw;
+    border-radius: 1vw;
+    border: 0.4vw solid black;
+    text-align: center;
+    margin-left: 125vh;
+    margin-top: 8vh;
+}
+#playbutton {
+    background-color: #14567E;
+    border-radius: 10vw;
+    color: white;
+    padding: 3px 10px;
+    margin-top: 40vh;
+    cursor: pointer;
+    width: 12vw;
+    height: 6vh;
+    font-size: 2vw;
+    margin-top: 4vh;
+    margin-bottom: 0.2vh;
+}
+input {
+    width: 20vw;
+    border-radius: 0.3vw;
+    border: 0.3vw solid black;
+    padding-top: 1.5vh;
+    margin-top: 2vw;
+}
+#playerName{
+    font-size: 1.8vw;
+    text-align: center;
+}
+#nickname{
+    font-size: 1.8vw;
+    text-align: center;
+}
+
+/* For mobile */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 8vw;
+        width: 80vw;
+        margin-left: 0;
+    }
+
+    form {
+        width: 80vw;
+        margin-left: 0;
+    }
+
+    #playbutton {
+        width: 50vw;
+    }
+
+    input {
+        width: 70vw;
+    }
+}
+/* For laptop */
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 4vw;
+        width: 60vw;
+    }
+
+    form {
+        width: 40vw;
+    }
+
+    #playbutton {
+        width: 18vw;
+        font-size: 1.5vw;
+    }
+
+    input {
+        width: 30vw;
+    }
+
+    #playerName,
+    #nickname {
+        font-size: 1.5vw;
+    }
+}
